@@ -7,6 +7,7 @@ import vercel from "@astrojs/vercel/serverless";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import simpleStackForm from "simple-stack-form";
+import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
@@ -32,4 +33,6 @@ export default defineConfig({
   adapter: vercel({
     analytics: true,
   }),
+  output: 'server',
+  adapter: netlify(),
 });
