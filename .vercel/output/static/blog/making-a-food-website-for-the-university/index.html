@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.16.18"><!-- Font preloads --><link rel="preload" href="/fonts/calsans-semibold.woff2" as="font" type="font/woff2" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://astro-nomy.vercel.app/blog/making-a-food-website-for-the-university/"><!-- Primary Meta Tags --><title>Into the making of food.opensourceduth.gr | OpenSource DUTH</title><meta name="title" content="Into the making of food.opensourceduth.gr | OpenSource DUTH"><meta name="description" content="A look behind the scenes on how we make the website or smth"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://astro-nomy.vercel.app/blog/making-a-food-website-for-the-university/"><meta property="og:title" content="Into the making of food.opensourceduth.gr"><meta property="og:description" content="A look behind the scenes on how we make the website or smth"><meta property="og:image" content="https://astro-nomy.vercel.app/og.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://astro-nomy.vercel.app/blog/making-a-food-website-for-the-university/"><meta property="twitter:title" content="Into the making of food.opensourceduth.gr"><meta property="twitter:description" content="A look behind the scenes on how we make the website or smth"><meta property="twitter:image" content="https://astro-nomy.vercel.app/og.jpg"><!-- Dark mode with prevent flickering flash between navigations --><script>
+const setDarkMode = () => {
+  const theme = (() => {
+    if (
+      typeof localStorage !== "undefined" &&
+      localStorage.getItem("theme")
+    ) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+  window.localStorage.setItem("theme", theme);
+};
+
+setDarkMode();
+document.addEventListener("astro:after-swap", setDarkMode);
+</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.DsbHstgI.css"><script type="module" src="/_astro/hoisted.rasoniT7.js"></script><style>[data-astro-transition-scope="astro-ks7i2azy-1"] { view-transition-name: astro-ks7i2azy-1; }@layer astro { ::view-transition-old(astro-ks7i2azy-1) { 
+	animation-duration: 90ms, 220ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both, both;
+	animation-name: astroFadeOut, astroSlideToLeft; }::view-transition-new(astro-ks7i2azy-1) { 
+	animation-duration: 210ms, 220ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-delay: 30ms;
+	animation-fill-mode: both, both;
+	animation-name: astroFadeIn, astroSlideFromRight; }[data-astro-transition=back]::view-transition-old(astro-ks7i2azy-1) { 
+	animation-name: astroFadeOut, astroSlideToRight; }[data-astro-transition=back]::view-transition-new(astro-ks7i2azy-1) { 
+	animation-name: astroFadeIn, astroSlideFromLeft; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-ks7i2azy-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-ks7i2azy-1"] { 
+	animation-duration: 90ms, 220ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both, both;
+	animation-name: astroFadeOut, astroSlideToLeft; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-ks7i2azy-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-ks7i2azy-1"] { 
+	animation-duration: 210ms, 220ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+	animation-delay: 30ms;
+	animation-fill-mode: both, both;
+	animation-name: astroFadeIn, astroSlideFromRight; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-ks7i2azy-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-ks7i2azy-1"] { 
+	animation-name: astroFadeOut, astroSlideToRight; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-ks7i2azy-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-ks7i2azy-1"] { 
+	animation-name: astroFadeIn, astroSlideFromLeft; }</style><style>[data-astro-transition-scope="astro-4rjw2hgd-2"] { view-transition-name: badge-cat-making-a-food-website-for-the-university; }@layer astro { ::view-transition-old(badge-cat-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(badge-cat-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(badge-cat-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(badge-cat-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-4rjw2hgd-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-4rjw2hgd-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-4rjw2hgd-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-4rjw2hgd-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-4rjw2hgd-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-4rjw2hgd-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-4rjw2hgd-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-4rjw2hgd-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-3fmipmlo-3"] { view-transition-name: img-making-a-food-website-for-the-university; }@layer astro { ::view-transition-old(img-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(img-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(img-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(img-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-3fmipmlo-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-3fmipmlo-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-3fmipmlo-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-3fmipmlo-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-3fmipmlo-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-3fmipmlo-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-3fmipmlo-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-3fmipmlo-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-5hio3otc-4"] { view-transition-name: date-making-a-food-website-for-the-university; }@layer astro { ::view-transition-old(date-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(date-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(date-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(date-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-5hio3otc-4"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-5hio3otc-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-5hio3otc-4"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-5hio3otc-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-5hio3otc-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-5hio3otc-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-5hio3otc-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-5hio3otc-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-3mzj52bz-5"] { view-transition-name: title-making-a-food-website-for-the-university; }@layer astro { ::view-transition-old(title-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(title-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(title-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(title-making-a-food-website-for-the-university) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-3mzj52bz-5"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-3mzj52bz-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-3mzj52bz-5"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-3mzj52bz-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-3mzj52bz-5"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-3mzj52bz-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-3mzj52bz-5"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-3mzj52bz-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body class="flex flex-col min-h-screen">  <header class="flex items-center h-16 md:h-18 z-50 sticky top-0 bg-transparent backdrop-blur-md bg-opacity-95 border-b"> <div class="relative container flex items-center justify-between w-full"> <div class="flex items-center gap-6 md:gap-8 lg:gap-10"> <a href="/" class="hidden items-center space-x-2 md:flex"> <svg width="1.37em" height="1em" class="size-8" data-icon="stars-outline">   <symbol id="ai:local:stars-outline" viewBox="0 0 160 117"><g fill="none" stroke="currentColor"><path stroke-width="12" d="M81.5 60.5c12-15.5 41.5-12.499 52.503 1.552s10.992 35.454 0 50.446m-28.012-25.023C90.496 106.003 62.278 100.5 51.501 84s-9.22-36.03 3.015-50.027"/><path stroke-width="6" d="m.773 12.101 15 4m-.483-.039 11 13m-8.357-11.99L6.169 29.386m25.087-16.471-16.548 4.02"/><path stroke-width="7" d="m16.575.981.079 14.866"/></g></symbol><use href="#ai:local:stars-outline"></use>  </svg> <span class="hidden font-bold sm:inline-block "> OpenSource DUTH </span> </a> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z25l8bx" prefix="r1" component-url="/_astro/sheet-mobile-nav.DsJnmfMZ.js" component-export="SheetMobileNav" renderer-url="/_astro/client.DU15aLZy.js" props="{&quot;mainNavItems&quot;:[1,[[0,{&quot;title&quot;:[0,&quot;Blog&quot;],&quot;href&quot;:[0,&quot;/blog&quot;],&quot;description&quot;:[0,&quot;This is our blog where we post updates and news about our projects.&quot;],&quot;image&quot;:[0,&quot;/images/examples/blog.jpg&quot;]}],[0,{&quot;title&quot;:[0,&quot;Docs&quot;],&quot;href&quot;:[0,&quot;/soon&quot;],&quot;description&quot;:[0,&quot;Here you can find the documentation for all of our projects&quot;],&quot;image&quot;:[0,&quot;/images/examples/docs.jpg&quot;]}],[0,{&quot;title&quot;:[0,&quot;Join Us&quot;],&quot;href&quot;:[0,&quot;https://forms.gle/qq3BmP7FAuC49zDv7&quot;],&quot;description&quot;:[0,&quot;Join our community and contribute to our projects.&quot;],&quot;image&quot;:[0,&quot;/images/examples/join-us.jpg&quot;],&quot;external&quot;:[0,true],&quot;target&quot;:[0,&quot;_blank&quot;]}]]],&quot;sidebarNavItems&quot;:[1,[[0,{&quot;title&quot;:[0,&quot;Pages&quot;],&quot;items&quot;:[1,[[0,{&quot;title&quot;:[0,&quot;Changelog&quot;],&quot;href&quot;:[0,&quot;/releases&quot;],&quot;description&quot;:[0,&quot;A reproduction of Starlog template with Tailwind CSS.&quot;],&quot;image&quot;:[0,&quot;/images/examples/changelog.jpg&quot;]}],[0,{&quot;title&quot;:[0,&quot;About&quot;],&quot;href&quot;:[0,&quot;/about&quot;],&quot;description&quot;:[0,&quot;A simple page with a masonry gallery and little text.&quot;],&quot;image&quot;:[0,&quot;/images/examples/about.jpg&quot;]}]]]}],[0,{&quot;title&quot;:[0,&quot;Examples&quot;],&quot;items&quot;:[1,[[0,{&quot;title&quot;:[0,&quot;Blog&quot;],&quot;href&quot;:[0,&quot;/blog&quot;],&quot;description&quot;:[0,&quot;This is our blog where we post updates and news about our projects.&quot;],&quot;image&quot;:[0,&quot;/images/examples/static-blog.jpg&quot;]}],[0,{&quot;title&quot;:[0,&quot;Docs&quot;],&quot;href&quot;:[0,&quot;/docs/getting-started&quot;],&quot;description&quot;:[0,&quot;A Markdown/MDX docs site built using Content Collections.&quot;],&quot;image&quot;:[0,&quot;/images/examples/documentation.jpg&quot;]}]]]}]]],&quot;slot&quot;:[0,&quot;mobile-nav-header&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;SheetMobileNav&quot;,&quot;value&quot;:true}" await-children=""><button class="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md mr-2 h-8 px-1.5 md:hidden" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r1R0:" data-state="closed"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" class="size-5"><path fill-rule="evenodd" d="M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" stroke="currentColor" fill="currentColor" stroke-width="0px"></path></svg><span class="sr-only">Toggle Menu</span></button><!--astro:end--></astro-island> <div class="hidden md:flex"> <astro-island uid="15A6qi" prefix="r0" component-url="/_astro/main-navigation-menu.qWV9hVXz.js" component-export="MainNavigationMenu" renderer-url="/_astro/client.DU15aLZy.js" props="{&quot;slot&quot;:[0,&quot;left-header&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;MainNavigationMenu&quot;,&quot;value&quot;:true}" await-children=""><nav aria-label="Main" data-orientation="horizontal" dir="ltr" class="relative z-10 flex max-w-max flex-1 items-center justify-center"><div style="position:relative"><ul data-orientation="horizontal" class="group flex flex-1 list-none items-center justify-center space-x-1" dir="ltr"><li><a href="/blog" class="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-me font-bold transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">Blog</a><a href="/soon" class="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-me font-bold transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">Docs</a><a href="https://forms.gle/qq3BmP7FAuC49zDv7" class="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-me font-bold transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">Join Us</a></li></ul></div><div class="absolute left-0 top-full flex justify-center"></div></nav><!--astro:end--></astro-island> </div> </div> <!-- logo mobile center --> <div class="absolute top-1/2 left-1/2 -translate-x-4 -translate-y-4 md:hidden"> <a href="/" aria-label="Homepage"> <svg width="1.37em" height="1em" viewBox="0 0 160 117" class="size-8" data-icon="stars-outline">   <use href="#ai:local:stars-outline"></use>  </svg> </a> </div> <div class="flex items-center gap-x-4"> <a href="https://github.com/OpenSourceDUTH" target="_blank" rel="noreferrer" aria-label="github"> <svg width="0.97em" height="1em" class="size-[22px]" data-icon="github">   <symbol id="ai:local:github" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></symbol><use href="#ai:local:github"></use>  </svg> </a> <astro-island uid="1Kpznx" prefix="r2" component-url="/_astro/theme-toggle.BVSRz6aG.js" component-export="ThemeToggle" renderer-url="/_astro/client.DU15aLZy.js" props="{}" ssr="" client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children=""><div></div><!--astro:end--></astro-island> </div> </div> </header> <main class="">  <div class="relative container max-w-screen-md py-10"> <button onclick="history.back()" class="items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground h-10 py-2 px-4 rounded-md absolute left-[-200px] top-10 hidden xl:inline-flex text-muted-foreground" data-astro-transition-scope="astro-ks7i2azy-1"> <svg width="1em" height="1em" class="mr-2 size-4" data-icon="lucide:chevron-left">   <symbol id="ai:lucide:chevron-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18l-6-6l6-6"/></symbol><use href="#ai:lucide:chevron-left"></use>  </svg>  Back
+</button> <article class="prose dark:prose-invert max-w-none"> <a href="/blog/category/projects" data-astro-transition-scope="astro-4rjw2hgd-2"> <div class="inline-flex items-center border px-2.5 py-0.5 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 rounded-md capitalize">projects</div> </a> <img src="/images/blog/placeholder-1.jpg" class="rounded-xl overflow-hidden my-6" alt="Into the making of food.opensourceduth.gr" data-astro-transition-scope="astro-3fmipmlo-3" width="720" height="360" loading="lazy" decoding="async"> <div class="flex items-center justify-between"> <span class="font-medium text-muted-foreground" data-astro-transition-scope="astro-5hio3otc-4"> Jul 01, 2022  </span> </div> <h1 class="font-heading text-4xl my-4" data-astro-transition-scope="astro-3mzj52bz-5"> Into the making of food.opensourceduth.gr </h1> <p>A look behind the scenes on how we make the website or smth</p> <hr class="my-6">  <p>Lorem Ipsum Broda</p>  </article> </div>  </main> <footer class="border-t"> <div class="content-center container grid grid-cols-1 gap-6 py-14 sm:grid-cols-2 md:grid-cols-5"> <div> <span class="text-sm font-medium text-foreground"> OpenSource DUTH </span> <ul class="mt-4 list-inside space-y-3"> <li> <a href="/code-of-conduct" class="text-sm text-muted-foreground hover:text-primary"> Code of Conduct </a> </li><li> <a href="https://forms.gle/qq3BmP7FAuC49zDv7" class="text-sm text-muted-foreground hover:text-primary"> Join Us </a> </li><li> <a href="/blog" class="text-sm text-muted-foreground hover:text-primary"> Blog </a> </li> </ul> </div><div> <span class="text-sm font-medium text-foreground"> Projects </span> <ul class="mt-4 list-inside space-y-3"> <li> <a href="https://food.opensourceduth.gr" class="text-sm text-muted-foreground hover:text-primary"> Food Schedule </a> </li> </ul> </div> </div> <div class="border-t py-4"> <div class="container flex items-center justify-between"> <!-- <span class="text-muted-foreground text-sm">
+        Copyright &copy; 2024. All rights reserved.
+      </span> --> <p class="text-left text-sm text-muted-foreground">
+Made with ❤️ by the  <a href="https://twitter.com/miickasmt" target="_blank" rel="noreferrer" class="font-medium underline underline-offset-4">
+OpenSource team
+</a>
+. Hosting by  <a href="https://pointer.gr" target="_blank" rel="noreferrer" class="font-medium underline underline-offset-4">
+Pointer
+</a> </p> <!--<div class="flex items-center gap-3">
+        <a
+          href={siteConfig.links.github}
+          target="_blank"
+          rel="noreferrer"
+          class="font-medium underline underline-offset-4"
+        >
+          <Icon name="github" class="size-5" />
+        </a>
+        <ThemeToggle client:load />
+      </div>--> </div> </div> </footer>   <script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();</script><astro-island uid="Z16ouxW" component-url="/_astro/_astro-entry_sonner.DSRfdXph.js" component-export="Toaster" renderer-url="/_astro/client.DU15aLZy.js" props="{&quot;richColors&quot;:[0,true]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;Toaster&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island> </body></html>

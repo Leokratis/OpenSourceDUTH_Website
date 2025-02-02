@@ -1,4 +1,3 @@
-import db from "@astrojs/db";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
@@ -7,7 +6,6 @@ import vercel from "@astrojs/vercel/serverless";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import simpleStackForm from "simple-stack-form";
-import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
@@ -26,13 +24,10 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    db(),
     simpleStackForm(),
   ],
   output: "hybrid",
   adapter: vercel({
     analytics: true,
   }),
-  output: 'server',
-  adapter: netlify(),
 });
