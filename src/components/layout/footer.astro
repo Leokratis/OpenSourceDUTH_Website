@@ -27,6 +27,8 @@ const { className } = Astro.props;
                 <a
                   href={link.href}
                   class="text-sm text-muted-foreground hover:text-primary"
+                  target={link.target} 
+                  rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
                 >
                   {link.title}
                 </a>
@@ -46,7 +48,6 @@ const { className } = Astro.props;
       <p class="text-left text-sm text-muted-foreground">
         Made with ❤️ by the{" "}
         <a
-          href={siteConfig.links.twitter}
           target="_blank"
           rel="noreferrer"
           class="font-medium underline underline-offset-4"
@@ -78,3 +79,4 @@ const { className } = Astro.props;
     </div>
   </div>
 </footer>
+

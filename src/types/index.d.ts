@@ -2,6 +2,8 @@ export type NavItem = {
   title: string;
   href: string;
   disabled?: boolean;
+  target?: string;
+
 };
 export type MenuItem = NavItem & {
   image?: string;
@@ -18,14 +20,18 @@ export type SidebarNavItem = {
   title: string;
   disabled?: boolean;
   external?: boolean;
+  target?: string;
 } & (
   | {
       href: string;
       items?: never;
+      target?: string;
     }
   | {
       href?: string;
       items: MenuItem[];
+      target?: string;
+
     }
 );
 
@@ -35,7 +41,7 @@ export type SiteConfig = {
   url: string;
   ogImage: string;
   links: {
-    twitter: string;
+    // twitter: string;
     github: string;
   };
 };

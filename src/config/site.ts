@@ -7,7 +7,7 @@ export const siteConfig: SiteConfig = {
   url: "https://opensourceduth.gr",
   ogImage: "https://astro-nomy.vercel.app/og.jpg",
   links: {
-    twitter: "https://twitter.com/miickasmt",
+    // twitter: "https://twitter.com/miickasmt",
     github: "https://github.com/OpenSourceDUTH",
   },
 };
@@ -17,16 +17,24 @@ export const footerLinks: SidebarNavItem[] = [
     title: "OpenSource DUTH",
     items: [
       { title: "Code of Conduct", href: "/code-of-conduct" },
-      { title: "Join Us", href: "https://forms.gle/qq3BmP7FAuC49zDv7" },
+      { title: "Join Us", href: "https://forms.gle/qq3BmP7FAuC49zDv7", target: "_blank" },
       { title: "Blog", href: "/blog" },
     ],
   },
   {
     title: "Projects",
     items: [
-      { title: "Food Schedule", href: "https://food.opensourceduth.gr" },
+      { title: "Food Schedule", href: "https://food.opensourceduth.gr", target: "_blank" },
     ],
   },
+  {
+    title: "Social Media",
+    items: [
+      { title: "Instagram", href: "https://www.instagram.com/opensourceduth/", target: "_blank" },
+      { title: "Linkedin", href: "", target: "_blank" },
+
+    ],
+  }
   /*{
     title: "Docs",
     items: [

@@ -68,34 +68,40 @@ export const testimonials = [
     job: "Lorem Ipsum",
     image: "/src/icons/teamPlaceholder.jpg",
     review:
-      "Pellentesque blandit pharetra mi eu cursus. Cras sagittis, libero vel rhoncus tempor, turpis nisi posuere purus, a aliquam sem velit eget turpis. Quisque a magna nec nisi porta porttitor sit amet suscipit ante. Sed in sodales ipsum. Suspendisse varius ornare convallis. Vivamus mattis auctor blandit. Maecenas eu nunc tincidunt, hendrerit eros a, cursus dui. Quisque congue mollis venenatis. Nulla auctor nisi diam, sed placerat quam sollicitudin id. Vivamus eleifend risus ut arcu imperdiet egestas. Etiam vulputate, felis ut fringilla malesuada, risus ligula mollis ipsum, imperdiet molestie ipsum sapien eget velit. ",
+      " ",
   },
   {
-    name: "Vicky",
+    name: "Michalis",
     job: "Lorem Ipsum",
     image: "/src/icons/teamPlaceholder.jpg",
     review:
-      "Pellentesque blandit pharetra mi eu cursus. Cras sagittis, libero vel rhoncus tempor, turpis nisi posuere purus, a aliquam sem velit eget turpis. Quisque a magna nec nisi porta porttitor sit amet suscipit ante. Sed in sodales ipsum. Suspendisse varius ornare convallis. Vivamus mattis auctor blandit. Maecenas eu nunc tincidunt, hendrerit eros a, cursus dui. Quisque congue mollis venenatis. Nulla auctor nisi diam, sed placerat quam sollicitudin id. Vivamus eleifend risus ut arcu imperdiet egestas. Etiam vulputate, felis ut fringilla malesuada, risus ligula mollis ipsum, imperdiet molestie ipsum sapien eget velit. ",
-  },
+      "",},
   {
-    name: "R3verse Chaos",
+    name: "Vasiliki",
     job: "Lorem Ipsum",
     image: "/src/icons/teamPlaceholder.jpg",
     review:
-      "Pellentesque blandit pharetra mi eu cursus. Cras sagittis, libero vel rhoncus tempor, turpis nisi posuere purus, a aliquam sem velit eget turpis. Quisque a magna nec nisi porta porttitor sit amet suscipit ante. Sed in sodales ipsum. Suspendisse varius ornare convallis. Vivamus mattis auctor blandit. Maecenas eu nunc tincidunt, hendrerit eros a, cursus dui. Quisque congue mollis venenatis. Nulla auctor nisi diam, sed placerat quam sollicitudin id. Vivamus eleifend risus ut arcu imperdiet egestas. Etiam vulputate, felis ut fringilla malesuada, risus ligula mollis ipsum, imperdiet molestie ipsum sapien eget velit. ",
+      "",
   },
   {
-    name: "Jimman",
+    name: "Vasilis",
     job: "Lorem Ipsum",
     image: "/src/icons/teamPlaceholder.jpg",
     review:
-      "Pellentesque blandit pharetra mi eu cursus. Cras sagittis, libero vel rhoncus tempor, turpis nisi posuere purus, a aliquam sem velit eget turpis. Quisque a magna nec nisi porta porttitor sit amet suscipit ante. Sed in sodales ipsum. Suspendisse varius ornare convallis. Vivamus mattis auctor blandit. Maecenas eu nunc tincidunt, hendrerit eros a, cursus dui. Quisque congue mollis venenatis. Nulla auctor nisi diam, sed placerat quam sollicitudin id. Vivamus eleifend risus ut arcu imperdiet egestas. Etiam vulputate, felis ut fringilla malesuada, risus ligula mollis ipsum, imperdiet molestie ipsum sapien eget velit. ",
+      " ",
   },
   {
-    name: "BeyerDynamikos",
+    name: "Dimitris",
     job: "Lorem Ipsum",
     image: "/src/icons/teamPlaceholder.jpg",
     review:
-      "Pellentesque blandit pharetra mi eu cursus. Cras sagittis, libero vel rhoncus tempor, turpis nisi posuere purus, a aliquam sem velit eget turpis. Quisque a magna nec nisi porta porttitor sit amet suscipit ante. Sed in sodales ipsum. Suspendisse varius ornare convallis. Vivamus mattis auctor blandit. Maecenas eu nunc tincidunt, hendrerit eros a, cursus dui. Quisque congue mollis venenatis. Nulla auctor nisi diam, sed placerat quam sollicitudin id. Vivamus eleifend risus ut arcu imperdiet egestas. Etiam vulputate, felis ut fringilla malesuada, risus ligula mollis ipsum, imperdiet molestie ipsum sapien eget velit.",
+      "",
+  },
+  {
+    name: "Sotiris",
+    job: "Lorem Ipsum",
+    image: "/src/icons/teamPlaceholder.jpg",
+    review:
+     " - ",
   }
 ];
