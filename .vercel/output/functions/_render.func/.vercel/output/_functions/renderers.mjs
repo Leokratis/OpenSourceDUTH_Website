@@ -1,7 +1,7 @@
 import React__default, { createElement } from 'react';
 import ReactDOM from 'react-dom/server';
-import { g as AstroUserError, A as AstroError } from './chunks/astro/assets-service_BrBQmwr5.mjs';
-import { i as renderJSX, g as createVNode, A as AstroJSX } from './chunks/astro/server_CcjJVm1H.mjs';
+import { g as AstroUserError, A as AstroError } from './chunks/astro/assets-service_DZ1EZ0zV.mjs';
+import { A as AstroJSX, l as renderJSX, g as createVNode } from './chunks/astro/server_pSUIRXNd.mjs';
 
 const contexts = new WeakMap();
 
