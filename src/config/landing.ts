@@ -57,7 +57,7 @@ export const Projects: Project[] = [
     title: "University Food Schedule",
     description:
       "University Food Schedule website. A simple website that shows the food daily schedule of the university.",
-    link: "https://food.opensourceduth.gr",
+    link: "https://food.michaelselvesakis.com",
     icon: "/images/projects/food.png",
   }
 ];

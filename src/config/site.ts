@@ -24,7 +24,7 @@ export const footerLinks: SidebarNavItem[] = [
   {
     title: "Projects",
     items: [
-      { title: "Food Schedule", href: "https://food.opensourceduth.gr", target: "_blank" },
+      { title: "Food Schedule", href: "https://food.michaelselvesakis.com", target: "_blank" },
     ],
   },
   {
