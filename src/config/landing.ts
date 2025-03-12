@@ -65,43 +65,40 @@ export const Projects: Project[] = [
 export const testimonials = [
   {
     name: "Leokratis",
-    job: "Lorem Ipsum",
+```
+fix: address missing content in the main section
+```    job: "Full Stack Developer",
     image: "/src/icons/teamPlaceholder.jpg",
-    review:
-      " ",
+    review: "The next-saas-stripe-starter repo has truly revolutionized my development workflow...",
   },
   {
     name: "Michalis",
-    job: "Lorem Ipsum",
+    job: "UI/UX Designer",
     image: "/src/icons/teamPlaceholder.jpg",
-    review:
-      "",},
+    review: "Thanks to next-saas-stripe-starter, I've been able to create modern and attractive user interfaces...",
+  },
   {
     name: "Vasiliki",
-    job: "Lorem Ipsum",
+    job: "Project Manager",
     image: "/src/icons/teamPlaceholder.jpg",
-    review:
-      "",
+    review: "I'm impressed by the quality of code and clear documentation of next-saas-stripe-starter...",
   },
   {
     name: "Vasilis",
-    job: "Lorem Ipsum",
+    job: "Marketing Manager",
     image: "/src/icons/teamPlaceholder.jpg",
-    review:
-      " ",
+    review: "next-saas-stripe-starter has been an invaluable asset in my role as a marketing manager...",
   },
   {
     name: "Dimitris",
-    job: "Lorem Ipsum",
+    job: "Data Analyst",
     image: "/src/icons/teamPlaceholder.jpg",
-    review:
-      "",
+    review: "next-saas-stripe-starter provided me with the tools I needed to efficiently manage user data...",
   },
   {
     name: "Sotiris",
-    job: "Lorem Ipsum",
+    job: "DevOps Engineer",
     image: "/src/icons/teamPlaceholder.jpg",
-    review:
-     " - ",
+    review: "Thanks to next-saas-stripe-starter, I was able to streamline the entire process and get payments up and running in no time...",
   }
 ];
