@@ -65,9 +65,7 @@ export const Projects: Project[] = [
 export const testimonials = [
   {
     name: "Leokratis",
-```
-fix: address missing content in the main section
-```    job: "Full Stack Developer",
+    job: "Full Stack Developer",
     image: "/src/icons/teamPlaceholder.jpg",
     review: "The next-saas-stripe-starter repo has truly revolutionized my development workflow...",
   },
