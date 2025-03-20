@@ -89,20 +89,20 @@ export const testimonials = [
     job: "Embedded Engineer",
     image: "/src/icons/teamPlaceholder.jpg",
     review: "Euismod mauris eu maecenas porttitor nam sit commodo eros. Nostra enim arcu sollicitudin interdum metus a pulvinar justo. Lobortis odio lorem hendrerit varius ipsum himenaeos. Luctus porttitor purus ad est porta quam semper. Consectetur odio laoreet diam semper nullam. Accumsan id suscipit condimentum sodales egestas.    ",
-    link: "https://drive.google.com/file/d/1t5dGa8n3D1AsNx7FPsPukHRHC_ajlqqX/view?usp=drive_link",
+    link: "/cv/vasilis.pdf",
   },
   {
     name: "Dimitris Manos",
     job: "Data Analyst",
     image: "/src/icons/teamPlaceholder.jpg",
     review: "next-saas-stripe-starter provided me with the tools I needed to efficiently manage user data...",
-    link: "https://drive.google.com/file/d/11AFE4xG0IqlR7P192UPXKpb4PWKsH-8d/view?usp=sharing",
+    link: "/cv/dimitris.pdf",
   },
   {
     name: "Sotiris Papasotiriou",
     job: "DevOps Engineer",
     image: "/src/icons/teamPlaceholder.jpg",
     review: "Dapibus magnis metus dolor vehicula conubia primis felis. At habitant ligula nec; sapien vivamus phasellus vel porta. At lacinia lectus; elit per amet vivamus! Ac duis elit per; commodo habitant et diam curabitur. Semper vivamus cras commodo primis massa ante blandit nec. Lectus nibh cubilia enim conubia nullam integer. Nullam tellus varius ad dignissim dis. Quis platea ut fringilla maximus ipsum. Sed platea malesuada lectus dis aliquam.",
-    link: "https://drive.google.com/file/d/1Rw0ShtTUytSfwdjEiD4s3Hm4O42ju_Oj/view?usp=sharing",
+    link: "/cv/sotiris.pdf",
   }
 ];
