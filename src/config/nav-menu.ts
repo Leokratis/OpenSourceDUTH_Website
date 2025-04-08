@@ -56,7 +56,7 @@ export const navMenuConfig: NavMenuConfig = {
 
     {
       title: "Join Us",
-      href: "https://forms.gle/qq3BmP7FAuC49zDv7",
+      href: "/apply",
       description: "Join our community and contribute to our projects.",
       image: "/images/examples/join-us.jpg",
       external: true,

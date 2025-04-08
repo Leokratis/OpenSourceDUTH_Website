@@ -17,7 +17,7 @@ export const footerLinks: SidebarNavItem[] = [
     title: "OpenSource DUTH",
     items: [
       { title: "Code of Conduct", href: "/code-of-conduct" },
-      { title: "Join Us", href: "https://forms.gle/qq3BmP7FAuC49zDv7", target: "_blank" },
+      { title: "Join Us", href: "/apply", target: "_blank" },
       { title: "Blog", href: "/blog" },
     ],
   },
