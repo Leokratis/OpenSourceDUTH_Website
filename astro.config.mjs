@@ -11,6 +11,7 @@ import simpleStackForm from "simple-stack-form";
 export default defineConfig({
   site: "https://astro-nomy.vercel.app",
   integrations: [
+    react(),
     mdx({
       syntaxHighlight: "shiki",
       shikiConfig: {
@@ -20,7 +21,6 @@ export default defineConfig({
     }),
     icon(),
     sitemap(),
-    react(),
     tailwind({
       applyBaseStyles: false,
     }),
