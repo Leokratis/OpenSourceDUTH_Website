@@ -2,11 +2,11 @@
 This is the website for the open source team at the Democritus University of Thrace. This website is a heavily modified version of the Astronomy open-source project and it hosts our projects along with other information about the team.
 
 ## Features
-- [x] ~Landing Page~
-- [x] ~Blog~
-- [x] ~Docs~
-- [x] ~Food Schedule~
-- [ ] ~University Map~
+- [x] Landing Page
+- [x] Blog
+- [x] Docs
+- [x] Food Schedule
+- [ ] University Map
 
 ## Commands
 All commands are run from the root of the project, from a terminal:
