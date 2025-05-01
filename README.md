@@ -8,16 +8,19 @@ This is the website for the open source team at the Democritus University of Thr
 - [x] ~Food Schedule~
 - [ ] ~University Map~
 
-## Running Locally
-1. Install dependencies
-```sh
-npm i
-```
+## Commands
+All commands are run from the root of the project, from a terminal:
 
-2. Start the development server
-```sh
-npm run dev
-```
+| Command                | Action                                              |
+| :--------------------- | :---------------------------------------------------|
+| `pnpm install`          | Installs dependencies                              |
+| `pnpm run dev`          | Starts local dev server at `localhost:3000`        |
+| `pnpm run build`        | Build your production site to `./dist/`            |
+| `pnpm run preview`      | Preview your build locally, before deploying       |
+| `pnpm run start`        | Starts a production dev server at  `localhost:3000`|
+| `pnpm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
+| `pnpm run astro --help` | Get help using the Astro CLI                       |
+
 
 ## License
 Licensed under the [MIT license](https://github.com/mickasmt/astro-nomy/blob/main/LICENSE.md).
