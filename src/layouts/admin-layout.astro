@@ -1,0 +1,77 @@
+---
+import Footer from "@/components/layout/footer.astro";
+import Header from "@/components/layout/header.astro";
+import { cn } from "@/lib/utils";
+import BaseLayout from "./base-layout.astro";
+import { ThemeToggle } from "@/components/theme-toggle";
+import Login from "@/components/ui/login";
+import Logout from "@/components/ui/logout";
+import AdminFeaturesGrid from "@/components/admin/admin-features-grid.astro";
+type Props = {
+  title: string;
+  description?: string;
+  mainClass?: string;
+};
+import { getSession } from 'auth-astro/server';
+
+// Make sure this layout is always server-rendered
+export const prerender = false;
+
+const session = await getSession(Astro.request);
+// Debug the session object to see what properties are available
+console.log('Admin layout session:', JSON.stringify(session?.user, null, 2));
+const { title, description, mainClass } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <Header className="border-b">
+    <div class="flex items-center gap-x-4" slot="left-header">
+        <strong>Admin Panel</strong>
+    </div>
+    <div class="flex items-center gap-x-4" slot="right-header">
+        <ThemeToggle client:load />
+        {session && <Logout client:load />}
+    </div>
+  </Header>
+  <main class={cn("container mx-auto py-8 px-4", mainClass)}>
+      {
+        !session ? (
+          <div class="flex flex-col items-center justify-center space-y-6 py-12">
+            <div class="text-center">
+              <h1 class="text-2xl font-bold mb-4">Admin Authentication Required</h1>
+              <p class="text-muted-foreground mb-6">Please sign in with an authorized GitHub account to access the admin panel.</p>
+              <Login client:load />
+            </div>
+          </div>
+        ) : session.user?.isAdmin ? (
+          <div class="space-y-6">
+            <div class="pb-4 border-b">
+              <h1 class="text-2xl font-bold">Welcome, {session.user?.name}</h1>
+                <p class="text-lg italic text-gray-500">Welcome to the OpenSourceDUTH admin area. You can manage site content here.</p>
+            </div>
+            
+            <AdminFeaturesGrid />
+
+            <div>
+              <footer class="text-sm text-muted-foreground">
+                Logged in as (@{session.user?.username})
+              </footer>
+            </div>
+            <slot />
+          </div>
+        ) : (
+            <div class="flex items-center justify-center min-h-[50vh]">
+            <div class="text-center max-w-xl">
+              <h1 class="text-2xl font-bold mb-4">Access Denied</h1>
+              <p class="text-muted-foreground mb-6">
+              Your GitHub account ({session.user?.name} - @{session.user?.username}) is not authorized to access the admin panel.
+              Please contact the site administrator if you believe this is an error.
+              </p>
+              <Logout client:load />
+            </div>
+            </div>
+        )
+      }
+  </main>
+  <Footer />
+</BaseLayout>

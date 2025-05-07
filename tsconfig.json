@@ -7,6 +7,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
-  }
+    },
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "types": ["auth-astro"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro", "src/**/*.d.ts"]
 }
