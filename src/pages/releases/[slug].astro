@@ -9,13 +9,24 @@ import { Icon } from "astro-icon/components";
 export async function getStaticPaths() {
   const releases = await getCollection("releases");
 
-  return releases.map((release) => ({
+  return releases.map((release: any) => ({
     params: { slug: release.slug },
     props: { release },
   }));
 }
 
-const { release } = Astro.props;
+interface Props {
+  release: {
+    render: () => Promise<{ Content: any }>;
+    data: {
+      title: string;
+      versionNumber: string;
+      date: Date;
+    };
+  };
+}
+
+const { release } = Astro.props as Props;
 const { Content } = await release.render();
 ---
 
