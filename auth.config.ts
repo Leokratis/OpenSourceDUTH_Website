@@ -59,7 +59,9 @@ export default defineConfig({
       if (profile) {
         token.username = profile.login;
         token.isAdmin = AUTHORIZED_ADMINS.includes(profile.login.toLowerCase());
-        console.log('JWT token updated:', token.username, 'isAdmin:', token.isAdmin);
+        if (process.env.NODE_ENV !== 'production') {
+          console.log('JWT token updated:', token.username, 'isAdmin:', token.isAdmin);
+        }
       } else if (user) {
         // Fallback to user object if available
         token.username = user.login || token.username;
