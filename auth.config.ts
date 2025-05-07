@@ -31,7 +31,9 @@ export default defineConfig({
     async signIn({ user, account, profile }) {
       // For GitHub, the username is available in the profile object
       const githubUsername = (profile?.login as string || '').toLowerCase();
-      console.log('Sign-in attempt from:', githubUsername, 'Authorized:', AUTHORIZED_ADMINS.includes(githubUsername));
+      if (process.env.NODE_ENV !== 'production') {
+        console.log('Sign-in attempt from:', githubUsername, 'Authorized:', AUTHORIZED_ADMINS.includes(githubUsername));
+      }
       return AUTHORIZED_ADMINS.includes(githubUsername);
     },
     async session({ session, user, token }) {
