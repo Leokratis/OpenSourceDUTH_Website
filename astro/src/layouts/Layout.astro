@@ -1,13 +1,14 @@
 ---
 export interface Props {
 	title: string;
+	lang?: string;
 }
 
-const { title } = Astro.props as Props;
+const { title, lang } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang || 'en'}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />

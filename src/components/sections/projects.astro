@@ -48,7 +48,7 @@ import HeaderSection from "./header-section.astro";
                     rounded="xl"
                     className="px-4"
                   >
-                    <a href={feature.link} class="flex items-center gap-2" target="_blank">
+                    <a href={`/${Astro.props.lang || 'en'}${feature.link}`} class="flex items-center gap-2" target="_blank">
                       <span>Visit the site</span>
                       <Icon name="lucide:arrow-up-right" class="size-4" />
                     </a>

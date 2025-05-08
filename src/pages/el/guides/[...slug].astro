@@ -20,7 +20,7 @@ const { Content } = await guide.render();
 if (!slug || !guide) {
   return new Response(null, {
     status: 404,
-    statusText: Astro.props.lang === 'el' ? 'Δεν βρέθηκε' : 'Not found',
+    statusText: "Not found",
   });
 }
 ---

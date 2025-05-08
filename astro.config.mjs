@@ -25,6 +25,13 @@ export default defineConfig({
   adapter: vercel({
     analytics: true,
   }),
+  i18n: {
+    locales: ["el", "en"],
+    defaultLocale: "en",
+    routing: {
+      prefixDefaultLocale: false
+    },
+  },
   // I have no idea what is wrog with astro... It should internally handle vite configs but my editor throws warnings. This fixes it.
   // Spent too much time on this already, so I just add this to the config.
   // If you want to fix it, good luck 🙏

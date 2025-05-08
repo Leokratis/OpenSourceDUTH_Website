@@ -30,7 +30,7 @@ const { Content } = await doc.render();
 if (!slug || !doc) {
   return new Response(null, {
     status: 404,
-    statusText: Astro.props.lang === 'el' ? 'Δεν βρέθηκε' : 'Not found',
+    statusText: "Not found",
   });
 }
 ---

@@ -34,7 +34,7 @@ import { siteConfig } from "@/config/site";
 
     <div class="flex justify-center space-x-2 md:space-x-4">
       <a
-        href="/apply" target="_blank"
+        href={`/${Astro.props.lang || 'en'}/apply`} target="_blank"
         class={cn(buttonVariants({ size: "lg", rounded: "full" }), "gap-2")}
       >
         <span >Join Us</span>

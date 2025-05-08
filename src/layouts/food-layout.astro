@@ -3,9 +3,9 @@
 import '@/styles/food.css';
 
 // Default metadata - can be overridden by individual pages
-const { title = 'Πρόγραμμα Λέσχης', description = 'Πρόγραμμα φαγητού φοιτητικής λέσχης ΔΗΜΟΚΡΙΤΕΙΟΥ ΠΑΝΕΠΙΣΤΗΜΙΟΥ ΘΡΑΚΗΣ (ΔΠΘ) (DUTH)' } = Astro.props;
+const { title = 'Πρόγραμμα Λέσχης', description = 'Πρόγραμμα φαγητού φοιτητικής λέσχης ΔΗΜΟΚΡΙΤΕΙΟΥ ΠΑΝΕΠΙΣΤΗΜΙΟΥ ΘΡΑΚΗΣ (ΔΠΘ) (DUTH)', lang = 'el' } = Astro.props;
 ---
-<html lang="el">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">

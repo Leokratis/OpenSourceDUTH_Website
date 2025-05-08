@@ -19,7 +19,7 @@ const { Content } = await post.render();
 if (!slug || !post) {
   return new Response(null, {
     status: 404,
-    statusText: Astro.props.lang === 'el' ? 'Δεν βρέθηκε' : 'Not found'
+    statusText: 'Not found'
   });
 }
 ---
