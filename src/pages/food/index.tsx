@@ -59,7 +59,7 @@ export default function FoodSchedule() {
     const dayOfWeekGreek = format(selectedDate, "EEEE", { locale: elLocale }).toLowerCase(); // Greek day name
     const dayOfWeek = dayMapping[dayOfWeekGreek as keyof typeof dayMapping]; // Map to English
 
-    const referenceDate = new Date(2024, 11, 30); // December 30, 2024 (Monday of the first full week)
+    const referenceDate = new Date(2025, 4, 27); // December 30, 2024 (Monday of the first full week)
     const daysSinceReference = Math.floor((selectedDate.getTime() - referenceDate.getTime()) / (1000 * 60 * 60 * 24));
     const weekNumber = ((Math.floor(daysSinceReference / 7) % 4) + 4) % 4 + 1; // Cycle through weeks 1 to 4
 
